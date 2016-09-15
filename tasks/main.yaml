@@ -1,0 +1,18 @@
+- name: install vim
+  apt: name={{ item }} state=present
+  with_items:
+    - vim-gtk
+- name: install build
+  apt: name={{ item }} state=present
+  with_items:
+    - build-essential
+    - cmake 
+    - git 
+    - subversion 
+- name: install miscellaneous
+  apt: name={{ item }} state=present
+  with_items:
+    - realpath 
+    - openssh-server
+    - keychain
+
